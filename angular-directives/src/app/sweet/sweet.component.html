@@ -1,0 +1,23 @@
+<section>
+    <h2>Sweet Treats</h2>
+
+    <!-- IF NOT COMPACT -->
+    <ng-container *ngIf="!compact">
+        <div class="food-item" *ngFor="let sweet of allSweets">
+            <img src={{sweet.imgURL}} />
+            <h4>{{sweet.name}}</h4>
+            <p class="prices">${{sweet.priceEach}} each / ${{sweet.pricePerDozen}} per dozen</p>
+        </div>
+    </ng-container>
+
+    <!-- IF COMPACT -->
+    <ng-container *ngIf="compact">
+        <div class="food-item limited" *ngFor="let sweet of allSweets">
+            <img class="thumbnail" src={{sweet.imgURL}} />
+            <h5>{{sweet.name}}</h5>
+            <p class="prices">${{sweet.priceEach}} each</p>
+            <p class="prices">${{sweet.pricePerDozen}} per dozen</p>
+        </div>
+    </ng-container>
+    
+</section>
