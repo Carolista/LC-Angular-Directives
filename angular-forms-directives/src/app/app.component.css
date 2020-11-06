@@ -1,0 +1,20 @@
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 220px);
+}
+
+app-sweet {
+    width: 50%;
+}
+
+app-savory {
+    width: 50%;
+}
