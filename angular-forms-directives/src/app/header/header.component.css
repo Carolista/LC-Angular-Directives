@@ -3,7 +3,7 @@ header {
     flex-direction: column;
     background-image: linear-gradient( #ee627a, #e97c8e); /* subtle */
     width: 100vw;
-    height: 140px;
+    height: 100px;
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;

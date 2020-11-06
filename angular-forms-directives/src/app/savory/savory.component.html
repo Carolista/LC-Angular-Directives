@@ -1,8 +1,22 @@
 <section>
     <h2>Savory Snacks</h2>
-    <div class="food-item" *ngFor="let savory of allSavories">
-        <img src={{savory.imgURL}} />
-        <h4>{{savory.name}}</h4>
-        <p class="prices">${{savory.priceEach}} per serving</p>
-    </div>
+
+        <!-- IF NOT COMPACT -->
+        <ng-container *ngIf="!compact">
+            <div class="food-item" *ngFor="let savory of allSavories">
+                <img src={{savory.imgURL}} />
+                <h4>{{savory.name}}</h4>
+                <p class="prices">${{savory.priceEach}} per serving</p>
+            </div>
+        </ng-container>
+    
+        <!-- IF COMPACT -->
+        <ng-container *ngIf="compact">
+            <div class="food-item limited" *ngFor="let savory of allSavories">
+                <img class="thumbnail" src={{savory.imgURL}} />
+                <h5>{{savory.name}}</h5>
+                <p class="prices">${{savory.priceEach}} per serving</p>
+            </div>
+        </ng-container>
+
 </section>

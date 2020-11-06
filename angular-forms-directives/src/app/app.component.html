@@ -1,10 +1,15 @@
 <!-- We are not putting any visible content in this file for this page. The content will be filled from each of the components below. However, the app.component.css file has some styling to help structure the overall layout. Notice we give style properties to <main> and <section> and only width to the <app-sweet> and <app-savory> components. The rest is handled within each of those components' scopes. -->
 
+<div id="toggle">
+    <div class="pseudobutton" [class.selected]="compact" (click)="compact = true">COMPACT</div>
+    <div class="pseudobutton" [class.selected]="!compact" (click)="compact = false">REGULAR</div>
+</div>
+
 <app-header></app-header>
 <main>
     <app-aside></app-aside>
     <section>
-        <app-sweet></app-sweet>
-        <app-savory></app-savory> 
+        <app-sweet [compact] = "compact"></app-sweet>
+        <app-savory [compact] = "compact"></app-savory> 
     </section>
 </main>

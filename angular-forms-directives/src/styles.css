@@ -13,14 +13,14 @@ body {
 
 h1 {
     font-family: 'Rancho', cursive;
-    font-size: 3rem;
+    font-size: 2.1rem;
     margin: 0px;
     text-align: center;
 }
 
 h2 {
     font-family: 'Rancho', cursive;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: #ee627a;
     margin: 0px 0px -10px; /* adjust so first photo isn't so far away */
 }
@@ -28,7 +28,7 @@ h2 {
 h3 {
     font-size: 1.2rem;
     font-weight: 700;
-    margin: 10px 0px;
+    margin: 5px 0px;
     text-align: center;
 }
 
@@ -40,6 +40,12 @@ h4 {
 
 h5 {
     font-size: 0.85rem;
+    font-weight: 700;
+    margin: 5px 0px 5px; 
+}
+
+h6 {
+    font-size: 0.75rem;
     font-weight: 700;
     margin: 5px 0px 5px; 
 }
@@ -63,18 +69,15 @@ img {
 
 .prices {
     font-size: 0.85rem;
+    margin: 3px 0px;
 }
 
-.info-block {
-    color: #222;
-    font-size: 0.8rem;
-    margin: 20px 0px;
+.thumbnail {
+    width: 100px;
+    float: left;
+    margin-right: 10px;
 }
 
-.side-box {
-    width: 95%;
-    background-color: rgb(255, 255, 255, 0.6);
-    border: none;
-    padding: 10px 10px 10px 20px;
-    margin: 20px 0px 10px -20px;
+.limited {
+    height: 71px;
 }
