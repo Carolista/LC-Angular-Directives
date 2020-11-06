@@ -1,24 +1,21 @@
 <section>
     <h2>Savory Snacks</h2>
 
-        <!-- REGULAR - use structural directive *ngIf -->
-        <ng-container *ngIf="!compact">
+        <!-- REGULAR - wrap in <ng-container> and use structural directive *ngIf -->
             <!-- Iterate through array of Food objects using structural directive *ngFor -->
-            <div class="food-item" *ngFor="let savory of allSavories">
-                <img src={{savory.imgURL}} />
-                <h4>{{savory.name}}</h4>
-                <p class="prices">${{savory.priceEach}} per serving</p>
+            <div class="food-item">
+                <img src="../assets/images/stuffed-squash.jpg" />
+                <h4>Stuffed Squash</h4>
+                <p class="prices">$3.99 per serving</p>
             </div>
-        </ng-container>
+
     
-        <!-- COMPACT - use structural directive *ngIf -->
-        <ng-container *ngIf="compact">
+        <!-- COMPACT - wrap in <ng-container> and use structural directive *ngIf -->
             <!-- Iterate through array of Food objects using structural directive *ngFor -->
-            <div class="food-item limited" *ngFor="let savory of allSavories">
-                <img class="thumbnail" src={{savory.imgURL}} />
-                <h5>{{savory.name}}</h5>
-                <p class="prices">${{savory.priceEach}} per serving</p>
+            <div class="food-item limited">
+                <img class="thumbnail" src="../assets/images/stuffed-squash.jpg" />
+                <h5>Stuffed Squash</h5>
+                <p class="prices">$3.99 per serving</p>
             </div>
-        </ng-container>
 
 </section>

@@ -9,7 +9,7 @@ import { Food } from '../food';
 
 export class SavoryComponent implements OnInit {
 
-    @Input() compact: boolean; // this is changed in the app component
+    
 
     allSavories: Food[] = [
         // Notice these don't use the optional last parameter, pricePerDozen
