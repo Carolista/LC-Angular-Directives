@@ -1,0 +1,49 @@
+LEARNING HOW TO NEST COMPONENTS AND USE STRUCTURAL DIRECTIVES IN ANGULAR
+
+Most of this is set up for you, so you don't need to edit the CSS but you do want to take note of where the styles are set - the top level, index.css, sets styles globally (for the whole application). But each component's css file can hold styling specifically for that component and sometimes it is used to override global styles. There are examples of that throughout this application, so take a look.
+
+The arrays of Food objects have already been set for you in the sweet and savory components. Your job will be to display them on the page using the structural directives *ngIf and *ngFor, the special Angular element <ng-container>, and your knowledge of accessing properties of an object.
+
+You also will provide functionality for the pseudo-buttons at the top right of the page which will allow the user to switch between regular view and compact view.
+
+Before you begin, use ng serve in the terminal to get the application running at localhost:4200 in your browser. If you don't have autosave on, you can turn it on in the File menu of the VSCode app. This will allow you to see the changes you are making in real time. If it looks like it's breaking mid-change, just keep typing and then make sure it has come out the way you were expecting.
+
+STEP 1
+Let's get the regular view of each item going on the page. 
+    - Open food.ts and take a look at the names of the properties for a Food object. You'll need those to reference each property separately on the page.
+    - In the sweet component, open the TS file and note the way the objects in the array have been created from the Food class with specific arguments in the constructor.
+    - In the sweet.component.html file, you'll see a single food item displayed (but it is hard-coded and is not yet pulling its values from the array of Food objects). Alter this block so that it uses *ngFor to iterate through the allSweets array and display ALL the Food objects on the page. 
+
+...then go over to the savory component and do the same thing for those items.
+
+STEP 2
+Before we can create an alternate view for the food blocks, we need to get our compact/regular pseudo-buttons functional at the top of the app component. (Notice in the CSS that these have absolute positioning and a z-index of 1, which is why it can float above the header component like that.) 
+    - Look at app.component.ts. See the field (property) called compact? This is set by default to the value of false. Our buttons will allow the user to toggle between true and false.
+    - In the html file for the app component, add a (click) event to each pseudo-button's div element that changes the value of the boolean 'compact' to true or false. 
+    - Now address the styling so the user can see which button is currently selected. Use the syntax [class.selected]=" " inside both div elements with the class "pseudobutton". Inside the quotes, assign the boolean logic using the 'compact' variable to add that class only when it is either true or false. Test it out on the page. Does each button get highlighted as a white block when it's clicked?
+
+STEP 3
+Now that our buttons are changing the values of the field 'compact' in the app TS file, we need to make sure that value is passed to the sweet and savory components. 
+    - Go to app.component.html and add the following inside each of the tags for those components: [compact] = "compact". 
+    - Now go to sweet.component.ts. Inside the class, above the constructor, add the following line of code: @Input() compact: boolean; 
+    - Notice on line 1 that the Input dependency has already been imported for you.
+    - Now there is no need to assign a value of true or false for 'compact' - it comes directly from the app component! But you have access to its current value so that you can display things on the page differently depending on whether it is true or false.
+
+... add the same code with the @Input() decorator to the savory component TS file.
+
+STEP 4
+Time to create the structure for the alternate (compact) view! 
+    - Just like you did for the regular view, go to sweet.component.html and alter the compact block so that it can use *ngFor to iterate through the allSweets array and display ALL the Food objects on the page. 
+    - Now you need to wrap each of the blocks (regular and component) with a <ng-container> element and use *ngIf to make sure it will be included in the component only if 'compact' is true (or false). 
+    - Test it out! Toggle the 'compact' and 'regular' pseudobuttons at the top of the page. Does it switch back and forth?
+
+... repeat for the savory page.
+
+STEP 5
+One last thing. Did you notice that on some of the sweet food items there is no pricePerDozen? We need to add an *ngIf wrapper (use <ng-container> again) to enclose JUST the content holding the price per dozen so that it only shows up if the value of sweet.pricePerDozen is not null. Make sure it's working as expected for BOTH modes - regular and compact.
+
+That's it! You should now have a functional, dynamic page. If you get really stuck, checkout the solution branch and refer to my code.
+
+------
+Thank my grandmother and my memories of her wonderful southern cooking for the inspiration for this page. She never ran anything other than her own kitchen, but man if she HAD owned a restaurant she would have sold out every day. Yum.
+

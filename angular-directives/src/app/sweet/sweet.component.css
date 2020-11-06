@@ -1,3 +1,5 @@
+/* Because the section element has been defined differently in the parent component, app, we need to specify a new style property here for the sweet component. */
+
 section {
     padding: 20px;
 }

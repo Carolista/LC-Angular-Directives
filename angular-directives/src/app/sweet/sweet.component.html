@@ -1,22 +1,25 @@
 <section>
     <h2>Sweet Treats</h2>
 
-    <!-- IF NOT COMPACT -->
+    <!-- REGULAR - use structural directive *ngIf -->
     <ng-container *ngIf="!compact">
+        <!-- Iterate through array of Food objects using structural directive *ngFor -->
         <div class="food-item" *ngFor="let sweet of allSweets">
             <img src={{sweet.imgURL}} />
             <h4>{{sweet.name}}</h4>
-            <p class="prices">${{sweet.priceEach}} each / ${{sweet.pricePerDozen}} per dozen</p>
+            <p class="prices">${{sweet.priceEach}} each <ng-container *ngIf="sweet.pricePerDozen !== null">/ ${{sweet.pricePerDozen}} per dozen</ng-container></p>
         </div>
     </ng-container>
 
-    <!-- IF COMPACT -->
+    <!-- COMPACT - use structural directive *ngIf -->
     <ng-container *ngIf="compact">
+        <!-- Iterate through array of Food objects using structural directive *ngFor -->
         <div class="food-item limited" *ngFor="let sweet of allSweets">
             <img class="thumbnail" src={{sweet.imgURL}} />
             <h5>{{sweet.name}}</h5>
             <p class="prices">${{sweet.priceEach}} each</p>
-            <p class="prices">${{sweet.pricePerDozen}} per dozen</p>
+            <!-- Use structural directive *ngIf to display pricePerDozen only if not null -->
+            <ng-container *ngIf="sweet.pricePerDozen !== null"><p class="prices">${{sweet.pricePerDozen}} per dozen</p></ng-container>
         </div>
     </ng-container>
     
