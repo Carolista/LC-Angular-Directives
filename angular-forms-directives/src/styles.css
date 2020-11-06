@@ -11,14 +11,6 @@ body {
     box-sizing: border-box;
 }
 
-app-root {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
 h1 {
     font-family: 'Rancho', cursive;
     font-size: 3rem;
@@ -30,7 +22,7 @@ h2 {
     font-family: 'Rancho', cursive;
     font-size: 2rem;
     color: #ee627a;
-    margin: 0px;
+    margin: 0px 0px -10px; /* adjust so first photo isn't so far away */
 }
 
 h3 {
@@ -43,14 +35,46 @@ h3 {
 h4 {
     font-size: 1rem;
     font-weight: 700;
-    margin: 10px 0px 5px;
+    margin: 0px 0px 5px;
+}
+
+h5 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 5px 0px 5px; 
 }
 
 p {
-    margin: 0px 0px 15px;
+    margin: 0px 0px 5px;
 }
 
 img {
     width: 100%; /* of whatever container it's in */
     border: 2px #ee627a solid;
+    margin: 0px;
+}
+
+
+/* CLASSES */
+
+.food-item {
+    margin: 30px 0px 0px;
+}
+
+.prices {
+    font-size: 0.85rem;
+}
+
+.info-block {
+    color: #222;
+    font-size: 0.8rem;
+    margin: 20px 0px;
+}
+
+.side-box {
+    width: 95%;
+    background-color: rgb(255, 255, 255, 0.6);
+    border: none;
+    padding: 10px 10px 10px 20px;
+    margin: 20px 0px 10px -20px;
 }

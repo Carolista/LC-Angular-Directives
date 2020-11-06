@@ -1,4 +1,8 @@
 <section>
     <h2>Savory Snacks</h2>
-    <p>savory works!</p>
+    <div class="food-item" *ngFor="let savory of allSavories">
+        <img src={{savory.imgURL}} />
+        <h4>{{savory.name}}</h4>
+        <p class="prices">${{savory.priceEach}} per serving</p>
+    </div>
 </section>

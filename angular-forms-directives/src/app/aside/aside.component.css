@@ -2,9 +2,9 @@ aside {
     display: flex;
     flex-direction: column;
     background: url('/assets/images/pink-grid.jpg');
-    background-size: 240px;
+    background-size: 200px;
     background-repeat: repeat-y;
-    width: 200px;
-    height: calc(100vh - 140px);
+    width: 160px;
+    height: 100%;
     padding: 30px 20px;
 }
