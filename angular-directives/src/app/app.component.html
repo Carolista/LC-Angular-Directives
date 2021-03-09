@@ -1,5 +1,6 @@
-<!-- We are not putting any visible content in this file for this page. The content will be filled from each of the components below. However, the app.component.css file has some styling to help structure the overall layout. Notice we give style properties to <main> and <section> and only width to the <app-sweet> and <app-savory> components. The rest is handled within each of those components' scopes. -->
+<!-- Most of the content for this page will be filled from each of the components below. The app.component.css file has some styling to help structure the overall layout. Notice we give style properties to <main> and <section> and only width to the <app-sweet> and <app-savory> components. The rest is handled within each of those components' scopes. -->
 
+<!-- This is the only content on this page that doesn't come from another component-->
 <div id="toggle">
     <!-- This is where the user toggles between compact and regular modes -->
     <div class="pseudobutton" [class.selected]="compact" (click)="compact = true">COMPACT</div>
