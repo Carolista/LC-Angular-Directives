@@ -9,6 +9,7 @@ section {
     display: flex;
     flex-direction: row;
     width: calc(100vw - 200px);
+    min-width: 500px;
     margin: 0px 20px;
 }
 

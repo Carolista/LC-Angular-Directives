@@ -41,7 +41,7 @@ h4 {
 h5 {
     font-size: 0.85rem;
     font-weight: 700;
-    margin: 5px 0px 5px; 
+    margin: 20px 0px 0px; 
 }
 
 h6 {
@@ -57,7 +57,7 @@ p {
 img {
     width: 100%; /* of whatever container it's in */
     border: 2px #ee627a solid;
-    margin: 0px;
+    margin: 0px 0px 5px;
 }
 
 
@@ -80,4 +80,5 @@ img {
 
 .limited {
     height: auto;
+    width: 130px;
 }
