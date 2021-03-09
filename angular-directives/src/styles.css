@@ -79,6 +79,6 @@ img {
 }
 
 .limited {
-    height: 90px;
-    max-width: 120;
+    height: auto;
+    max-width: 130;
 }
