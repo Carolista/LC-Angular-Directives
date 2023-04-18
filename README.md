@@ -2,8 +2,6 @@
 
 This example gives you practice on using the Angular structural directives \*ngIf and \*ngFor. Bonus feature: you get to see all the delicious southern food my grandmother used to make.
 
-**IMPORTANT - read the instructions.txt file before you begin.**
-
 Students - FORK this (all branches) to your own account and then clone down to your local machine. Use the `starter-code` branch to code along with the video. You can also reference the `solution` branch to study my code.
 
 Initially when you open the project in VSCode on your local computer, you will be in the main/master branch. Use the command 'git branch' in the terminal to view all available branches as shown below:
